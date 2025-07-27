@@ -1,134 +1,123 @@
-<!-- Main worksheet content: -->
-<div style="max-width: 900px; margin: 38px auto 80px auto; background: #fff; padding: 40px 36px; border-radius: 14px; box-shadow: 0 4px 28px #f3f3f3; font-family: Arial, Helvetica, sans-serif;">
-  <h2 style="color: #ba372a; font-size: 26pt; margin-bottom: 30px; letter-spacing: -1px;">From SWOT to Persona-Ready Ideas</h2>
-  <div style="margin-bottom: 40px;">
-    <div style="color: #1b4b7d; font-size: 16pt; margin-bottom: 12px;"><b>How to use</b></div>
-    <div style="color: #333; font-size: 1.07em; background: #f6f6f6; border-radius: 8px; padding: 14px 18px;">
-      <ol style="margin:0; padding-left:24px;">
-        <li>Work through each section below. Every field includes prompts—please complete all fields in detail.</li>
-        <li>Use credible sources for evidence—Statista, IBISWorld, ABS, company data, lectures, and more.</li>
-        <li>For SWOT, Segmentation, and JTBD, use <b>at least three</b> examples per table, with full referencing.</li>
-        <li>For Persona, use the layout below, upload an image, and ensure your persona looks authentic and complete.</li>
-        <li>When finished, click <b>Export to Word</b> to download a professional, RMIT-branded worksheet for submission.</li>
-      </ol>
-    </div>
+<div style="max-width: 900px; margin: 40px auto 80px auto; background: #fff; padding: 38px 38px 24px 38px; border-radius: 14px; box-shadow: 0 4px 28px #f3f3f3; font-family: Arial, Helvetica, sans-serif;">
+  <h2 style="color: #ba372a; font-size: 26pt; margin-bottom: 30px;">From SWOT to Persona-Ready Ideas</h2>
+  <div style="color: #1b4b7d; font-size: 17px; font-weight: bold; margin-bottom: 12px;">How to use</div>
+  <div style="color: #333; font-size: 1.07em; background: #f6f6f6; border-radius: 8px; padding: 14px 18px; margin-bottom:36px;">
+    <ol style="margin:0; padding-left:24px;">
+      <li>Work through each section below. Every field includes prompts—please complete all fields in detail.</li>
+      <li>Use credible sources for evidence—Statista, IBISWorld, ABS, company data, lectures, and more.</li>
+      <li>For SWOT, Segmentation, and JTBD, use <b>at least three</b> examples per table, with referencing.</li>
+      <li>For Persona, use the layout below, upload an image, and ensure your persona looks authentic and complete.</li>
+      <li>When finished, click <b>Export to Word</b> to download a professional worksheet for submission.</li>
+    </ol>
   </div>
 
   <!-- SWOT ANALYSIS -->
-  <h3 style="color:#1b4b7d; font-size: 18pt; margin-bottom: 16px;">1. SWOT Analysis</h3>
+  <h3 style="color:#1b4b7d; font-size: 18pt; margin-bottom: 18px;">1. SWOT Analysis</h3>
   <div style="margin-bottom:28px;">Add up to three detailed points for each area. Use data or credible references for every point.</div>
 
   <!-- Strengths -->
-  <div style="margin-bottom:24px;">
-    <h4 style="color:#1b4b7d; margin-bottom:8px;">Strengths</h4>
-    <table style="width:100%; background:#fff; border-collapse:collapse; margin-bottom:4px;">
-      <thead>
-        <tr style="background:#f6f6f6;">
-          <th style="width:66%; padding:7px 8px; text-align:left;">Strength (write in full sentence, e.g. 'Strong brand loyalty among urban professionals')</th>
-          <th style="width:34%; padding:7px 8px; text-align:left;">Source / Evidence (e.g. IBISWorld 2024, lecture, survey)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><textarea style="width:99%; min-height:38px;" placeholder="Strength 1..."></textarea></td>
-          <td><textarea style="width:97%; min-height:38px;" placeholder="Source..."></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea style="width:99%; min-height:38px;" placeholder="Strength 2..."></textarea></td>
-          <td><textarea style="width:97%; min-height:38px;" placeholder="Source..."></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea style="width:99%; min-height:38px;" placeholder="Strength 3..."></textarea></td>
-          <td><textarea style="width:97%; min-height:38px;" placeholder="Source..."></textarea></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <h4 style="color:#1b4b7d; margin-bottom:6px;">Strengths</h4>
+  <table style="width:100%; background:#fff; border-collapse:collapse; margin-bottom:10px;">
+    <thead>
+      <tr style="background:#f6f6f6;">
+        <th style="width:66%; padding:7px 8px; text-align:left;">Strength (full sentence)</th>
+        <th style="width:34%; padding:7px 8px; text-align:left;">Source / Evidence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><textarea id="swot_strength1" style="width:99%; min-height:38px;" placeholder="e.g. Strong brand loyalty among urban professionals"></textarea></td>
+        <td><textarea id="swot_strength1_source" style="width:97%; min-height:38px;" placeholder="e.g. IBISWorld 2024, lecture, survey"></textarea></td>
+      </tr>
+      <tr>
+        <td><textarea id="swot_strength2" style="width:99%; min-height:38px;" placeholder="Another strength..."></textarea></td>
+        <td><textarea id="swot_strength2_source" style="width:97%; min-height:38px;" placeholder="Source..."></textarea></td>
+      </tr>
+      <tr>
+        <td><textarea id="swot_strength3" style="width:99%; min-height:38px;" placeholder="Another strength..."></textarea></td>
+        <td><textarea id="swot_strength3_source" style="width:97%; min-height:38px;" placeholder="Source..."></textarea></td>
+      </tr>
+    </tbody>
+  </table>
 
   <!-- Weaknesses -->
-  <div style="margin-bottom:24px;">
-    <h4 style="color:#1b4b7d; margin-bottom:8px;">Weaknesses</h4>
-    <table style="width:100%; background:#fff; border-collapse:collapse; margin-bottom:4px;">
-      <thead>
-        <tr style="background:#f6f6f6;">
-          <th style="width:66%; padding:7px 8px;">Weakness (full sentence)</th>
-          <th style="width:34%; padding:7px 8px;">Source / Evidence</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><textarea style="width:99%; min-height:38px;" placeholder="Weakness 1..."></textarea></td>
-          <td><textarea style="width:97%; min-height:38px;" placeholder="Source..."></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea style="width:99%; min-height:38px;" placeholder="Weakness 2..."></textarea></td>
-          <td><textarea style="width:97%; min-height:38px;" placeholder="Source..."></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea style="width:99%; min-height:38px;" placeholder="Weakness 3..."></textarea></td>
-          <td><textarea style="width:97%; min-height:38px;" placeholder="Source..."></textarea></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <h4 style="color:#1b4b7d; margin-bottom:6px; margin-top:22px;">Weaknesses</h4>
+  <table style="width:100%; background:#fff; border-collapse:collapse; margin-bottom:10px;">
+    <thead>
+      <tr style="background:#f6f6f6;">
+        <th style="width:66%; padding:7px 8px;">Weakness (full sentence)</th>
+        <th style="width:34%; padding:7px 8px;">Source / Evidence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><textarea id="swot_weakness1" style="width:99%; min-height:38px;" placeholder="e.g. Limited reach in regional areas"></textarea></td>
+        <td><textarea id="swot_weakness1_source" style="width:97%; min-height:38px;" placeholder="e.g. Market report, company data"></textarea></td>
+      </tr>
+      <tr>
+        <td><textarea id="swot_weakness2" style="width:99%; min-height:38px;" placeholder="Another weakness..."></textarea></td>
+        <td><textarea id="swot_weakness2_source" style="width:97%; min-height:38px;" placeholder="Source..."></textarea></td>
+      </tr>
+      <tr>
+        <td><textarea id="swot_weakness3" style="width:99%; min-height:38px;" placeholder="Another weakness..."></textarea></td>
+        <td><textarea id="swot_weakness3_source" style="width:97%; min-height:38px;" placeholder="Source..."></textarea></td>
+      </tr>
+    </tbody>
+  </table>
 
   <!-- Opportunities -->
-  <div style="margin-bottom:24px;">
-    <h4 style="color:#1b4b7d; margin-bottom:8px;">Opportunities</h4>
-    <table style="width:100%; background:#fff; border-collapse:collapse; margin-bottom:4px;">
-      <thead>
-        <tr style="background:#f6f6f6;">
-          <th style="width:66%; padding:7px 8px;">Opportunity (full sentence)</th>
-          <th style="width:34%; padding:7px 8px;">Source / Evidence</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><textarea style="width:99%; min-height:38px;" placeholder="Opportunity 1..."></textarea></td>
-          <td><textarea style="width:97%; min-height:38px;" placeholder="Source..."></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea style="width:99%; min-height:38px;" placeholder="Opportunity 2..."></textarea></td>
-          <td><textarea style="width:97%; min-height:38px;" placeholder="Source..."></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea style="width:99%; min-height:38px;" placeholder="Opportunity 3..."></textarea></td>
-          <td><textarea style="width:97%; min-height:38px;" placeholder="Source..."></textarea></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <h4 style="color:#1b4b7d; margin-bottom:6px; margin-top:22px;">Opportunities</h4>
+  <table style="width:100%; background:#fff; border-collapse:collapse; margin-bottom:10px;">
+    <thead>
+      <tr style="background:#f6f6f6;">
+        <th style="width:66%; padding:7px 8px;">Opportunity (full sentence)</th>
+        <th style="width:34%; padding:7px 8px;">Source / Evidence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><textarea id="swot_opportunity1" style="width:99%; min-height:38px;" placeholder="e.g. Growing demand for sustainable products"></textarea></td>
+        <td><textarea id="swot_opportunity1_source" style="width:97%; min-height:38px;" placeholder="e.g. ABS 2024, news report"></textarea></td>
+      </tr>
+      <tr>
+        <td><textarea id="swot_opportunity2" style="width:99%; min-height:38px;" placeholder="Another opportunity..."></textarea></td>
+        <td><textarea id="swot_opportunity2_source" style="width:97%; min-height:38px;" placeholder="Source..."></textarea></td>
+      </tr>
+      <tr>
+        <td><textarea id="swot_opportunity3" style="width:99%; min-height:38px;" placeholder="Another opportunity..."></textarea></td>
+        <td><textarea id="swot_opportunity3_source" style="width:97%; min-height:38px;" placeholder="Source..."></textarea></td>
+      </tr>
+    </tbody>
+  </table>
 
   <!-- Threats -->
-  <div style="margin-bottom:40px;">
-    <h4 style="color:#1b4b7d; margin-bottom:8px;">Threats</h4>
-    <table style="width:100%; background:#fff; border-collapse:collapse; margin-bottom:4px;">
-      <thead>
-        <tr style="background:#f6f6f6;">
-          <th style="width:66%; padding:7px 8px;">Threat (full sentence)</th>
-          <th style="width:34%; padding:7px 8px;">Source / Evidence</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><textarea style="width:99%; min-height:38px;" placeholder="Threat 1..."></textarea></td>
-          <td><textarea style="width:97%; min-height:38px;" placeholder="Source..."></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea style="width:99%; min-height:38px;" placeholder="Threat 2..."></textarea></td>
-          <td><textarea style="width:97%; min-height:38px;" placeholder="Source..."></textarea></td>
-        </tr>
-        <tr>
-          <td><textarea style="width:99%; min-height:38px;" placeholder="Threat 3..."></textarea></td>
-          <td><textarea style="width:97%; min-height:38px;" placeholder="Source..."></textarea></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <h4 style="color:#1b4b7d; margin-bottom:6px; margin-top:22px;">Threats</h4>
+  <table style="width:100%; background:#fff; border-collapse:collapse; margin-bottom:24px;">
+    <thead>
+      <tr style="background:#f6f6f6;">
+        <th style="width:66%; padding:7px 8px;">Threat (full sentence)</th>
+        <th style="width:34%; padding:7px 8px;">Source / Evidence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><textarea id="swot_threat1" style="width:99%; min-height:38px;" placeholder="e.g. New low-cost entrants in market"></textarea></td>
+        <td><textarea id="swot_threat1_source" style="width:97%; min-height:38px;" placeholder="e.g. News, competitor analysis"></textarea></td>
+      </tr>
+      <tr>
+        <td><textarea id="swot_threat2" style="width:99%; min-height:38px;" placeholder="Another threat..."></textarea></td>
+        <td><textarea id="swot_threat2_source" style="width:97%; min-height:38px;" placeholder="Source..."></textarea></td>
+      </tr>
+      <tr>
+        <td><textarea id="swot_threat3" style="width:99%; min-height:38px;" placeholder="Another threat..."></textarea></td>
+        <td><textarea id="swot_threat3_source" style="width:97%; min-height:38px;" placeholder="Source..."></textarea></td>
+      </tr>
+    </tbody>
+  </table>
 
   <!-- SEGMENTATION -->
-  <h3 style="color:#1b4b7d; font-size: 18pt; margin-top:36px; margin-bottom:16px;">2. Segmentation – Four Lenses</h3>
-  <table style="width:100%; background:#fff; border-collapse:collapse; margin-bottom:36px;">
+  <h3 style="color:#1b4b7d; font-size: 18pt; margin-top:38px; margin-bottom:12px;">2. Segmentation – Four Lenses</h3>
+  <table style="width:100%; background:#fff; border-collapse:collapse; margin-bottom:32px;">
     <thead>
       <tr style="background:#f6f6f6;">
         <th style="width:23%; padding:8px;">Lens</th>
@@ -137,17 +126,33 @@
       </tr>
     </thead>
     <tbody>
-      <tr><td>Geographic</td><td><textarea style="width:97%;" placeholder="e.g. Urban, near campus, metro areas"></textarea></td><td><textarea style="width:97%;" placeholder="ABS 2024, company data"></textarea></td></tr>
-      <tr style="background:#f6f6f6;"><td>Demographic</td><td><textarea style="width:97%;" placeholder="e.g. 20–35, full-time students, living with roommates"></textarea></td><td><textarea style="width:97%;" placeholder="Source..."></textarea></td></tr>
-      <tr><td>Psychographic</td><td><textarea style="width:97%;" placeholder="e.g. Convenience-seeking, cost-sensitive, health focused"></textarea></td><td><textarea style="width:97%;" placeholder="Source..."></textarea></td></tr>
-      <tr style="background:#f6f6f6;"><td>Behavioural</td><td><textarea style="width:97%;" placeholder="e.g. Weekly laundry, digital app user, loyal to quick brands"></textarea></td><td><textarea style="width:97%;" placeholder="Source..."></textarea></td></tr>
+      <tr>
+        <td>Geographic</td>
+        <td><textarea id="segment_geographic" style="width:97%;" placeholder="e.g. Urban, near campus, metro areas"></textarea></td>
+        <td><textarea id="segment_geographic_source" style="width:97%;" placeholder="ABS 2024, company data"></textarea></td>
+      </tr>
+      <tr style="background:#f6f6f6;">
+        <td>Demographic</td>
+        <td><textarea id="segment_demographic" style="width:97%;" placeholder="e.g. 20–35, full-time students, living with roommates"></textarea></td>
+        <td><textarea id="segment_demographic_source" style="width:97%;" placeholder="Source..."></textarea></td>
+      </tr>
+      <tr>
+        <td>Psychographic</td>
+        <td><textarea id="segment_psychographic" style="width:97%;" placeholder="e.g. Convenience-seeking, cost-sensitive, health focused"></textarea></td>
+        <td><textarea id="segment_psychographic_source" style="width:97%;" placeholder="Source..."></textarea></td>
+      </tr>
+      <tr style="background:#f6f6f6;">
+        <td>Behavioural</td>
+        <td><textarea id="segment_behavioural" style="width:97%;" placeholder="e.g. Weekly laundry, digital app user, loyal to quick brands"></textarea></td>
+        <td><textarea id="segment_behavioural_source" style="width:97%;" placeholder="Source..."></textarea></td>
+      </tr>
     </tbody>
   </table>
 
   <!-- JTBD -->
-  <h3 style="color:#1b4b7d; font-size: 18pt; margin-top:36px; margin-bottom:16px;">3. Jobs to Be Done (JTBD)</h3>
-  <div style="margin-bottom:12px;">Identify up to three scenarios for each type: Functional, Emotional, and Social. Rank each scenario 1–10 for Importance and Satisfaction (higher gap = higher priority). Add a detailed justification below for your highest-priority job.</div>
-  <table style="width:100%; background:#fff; border-collapse:collapse; margin-bottom:18px;">
+  <h3 style="color:#1b4b7d; font-size: 18pt; margin-top:38px; margin-bottom:12px;">3. Jobs to Be Done (JTBD)</h3>
+  <div style="margin-bottom:10px;">Identify up to three scenarios for each type: Functional, Emotional, Social. Rank each 1–10 for Importance and Satisfaction. Add detailed justification below for your highest-priority job.</div>
+  <table style="width:100%; background:#fff; border-collapse:collapse; margin-bottom:16px;">
     <thead>
       <tr style="background:#f6f6f6;">
         <th style="width:20%; padding:7px;">Type</th>
@@ -158,130 +163,132 @@
       </tr>
     </thead>
     <tbody>
-      <!-- Functional Jobs -->
-      <tr><td rowspan="3" style="vertical-align:top;"><b>Functional</b></td>
-        <td><textarea style="width:97%;" placeholder="e.g. When I get home late, I want to..."></textarea></td>
-        <td><input type="number" min="1" max="10" style="width:45px;"></td>
-        <td><input type="number" min="1" max="10" style="width:45px;"></td>
-        <td><textarea style="width:97%;" placeholder="Source..."></textarea></td>
+      <!-- Repeat for three of each -->
+      <!-- Functional -->
+      <tr>
+        <td rowspan="3" style="vertical-align:top;"><b>Functional</b></td>
+        <td><textarea id="jtbd_func1" style="width:97%;" placeholder="e.g. When I get home late, I want to..."></textarea></td>
+        <td><input id="jtbd_func1_importance" type="number" min="1" max="10" style="width:44px;"></td>
+        <td><input id="jtbd_func1_satisfaction" type="number" min="1" max="10" style="width:44px;"></td>
+        <td><textarea id="jtbd_func1_source" style="width:97%;" placeholder="Source..."></textarea></td>
       </tr>
       <tr>
-        <td><textarea style="width:97%;" placeholder="Another functional scenario..."></textarea></td>
-        <td><input type="number" min="1" max="10" style="width:45px;"></td>
-        <td><input type="number" min="1" max="10" style="width:45px;"></td>
-        <td><textarea style="width:97%;" placeholder="Source..."></textarea></td>
+        <td><textarea id="jtbd_func2" style="width:97%;" placeholder="Another functional scenario..."></textarea></td>
+        <td><input id="jtbd_func2_importance" type="number" min="1" max="10" style="width:44px;"></td>
+        <td><input id="jtbd_func2_satisfaction" type="number" min="1" max="10" style="width:44px;"></td>
+        <td><textarea id="jtbd_func2_source" style="width:97%;" placeholder="Source..."></textarea></td>
       </tr>
       <tr>
-        <td><textarea style="width:97%;" placeholder="Third functional scenario..."></textarea></td>
-        <td><input type="number" min="1" max="10" style="width:45px;"></td>
-        <td><input type="number" min="1" max="10" style="width:45px;"></td>
-        <td><textarea style="width:97%;" placeholder="Source..."></textarea></td>
+        <td><textarea id="jtbd_func3" style="width:97%;" placeholder="Another functional scenario..."></textarea></td>
+        <td><input id="jtbd_func3_importance" type="number" min="1" max="10" style="width:44px;"></td>
+        <td><input id="jtbd_func3_satisfaction" type="number" min="1" max="10" style="width:44px;"></td>
+        <td><textarea id="jtbd_func3_source" style="width:97%;" placeholder="Source..."></textarea></td>
       </tr>
-      <!-- Emotional Jobs -->
-      <tr><td rowspan="3" style="vertical-align:top; background:#f6f6f6;"><b>Emotional</b></td>
-        <td style="background:#f6f6f6;"><textarea style="width:97%;" placeholder="e.g. When I'm overwhelmed, I want..."></textarea></td>
-        <td style="background:#f6f6f6;"><input type="number" min="1" max="10" style="width:45px;"></td>
-        <td style="background:#f6f6f6;"><input type="number" min="1" max="10" style="width:45px;"></td>
-        <td style="background:#f6f6f6;"><textarea style="width:97%;" placeholder="Source..."></textarea></td>
+      <!-- Emotional -->
+      <tr>
+        <td rowspan="3" style="vertical-align:top; background:#f6f6f6;"><b>Emotional</b></td>
+        <td style="background:#f6f6f6;"><textarea id="jtbd_emo1" style="width:97%;" placeholder="e.g. When I'm overwhelmed, I want..."></textarea></td>
+        <td style="background:#f6f6f6;"><input id="jtbd_emo1_importance" type="number" min="1" max="10" style="width:44px;"></td>
+        <td style="background:#f6f6f6;"><input id="jtbd_emo1_satisfaction" type="number" min="1" max="10" style="width:44px;"></td>
+        <td style="background:#f6f6f6;"><textarea id="jtbd_emo1_source" style="width:97%;" placeholder="Source..."></textarea></td>
       </tr>
       <tr style="background:#f6f6f6;">
-        <td><textarea style="width:97%;" placeholder="Another emotional scenario..."></textarea></td>
-        <td><input type="number" min="1" max="10" style="width:45px;"></td>
-        <td><input type="number" min="1" max="10" style="width:45px;"></td>
-        <td><textarea style="width:97%;" placeholder="Source..."></textarea></td>
+        <td><textarea id="jtbd_emo2" style="width:97%;" placeholder="Another emotional scenario..."></textarea></td>
+        <td><input id="jtbd_emo2_importance" type="number" min="1" max="10" style="width:44px;"></td>
+        <td><input id="jtbd_emo2_satisfaction" type="number" min="1" max="10" style="width:44px;"></td>
+        <td><textarea id="jtbd_emo2_source" style="width:97%;" placeholder="Source..."></textarea></td>
       </tr>
       <tr style="background:#f6f6f6;">
-        <td><textarea style="width:97%;" placeholder="Third emotional scenario..."></textarea></td>
-        <td><input type="number" min="1" max="10" style="width:45px;"></td>
-        <td><input type="number" min="1" max="10" style="width:45px;"></td>
-        <td><textarea style="width:97%;" placeholder="Source..."></textarea></td>
+        <td><textarea id="jtbd_emo3" style="width:97%;" placeholder="Another emotional scenario..."></textarea></td>
+        <td><input id="jtbd_emo3_importance" type="number" min="1" max="10" style="width:44px;"></td>
+        <td><input id="jtbd_emo3_satisfaction" type="number" min="1" max="10" style="width:44px;"></td>
+        <td><textarea id="jtbd_emo3_source" style="width:97%;" placeholder="Source..."></textarea></td>
       </tr>
-      <!-- Social Jobs -->
-      <tr><td rowspan="3" style="vertical-align:top;"><b>Social</b></td>
-        <td><textarea style="width:97%;" placeholder="e.g. When my friends visit, I want to..."></textarea></td>
-        <td><input type="number" min="1" max="10" style="width:45px;"></td>
-        <td><input type="number" min="1" max="10" style="width:45px;"></td>
-        <td><textarea style="width:97%;" placeholder="Source..."></textarea></td>
+      <!-- Social -->
+      <tr>
+        <td rowspan="3" style="vertical-align:top;"><b>Social</b></td>
+        <td><textarea id="jtbd_soc1" style="width:97%;" placeholder="e.g. When my friends visit, I want to..."></textarea></td>
+        <td><input id="jtbd_soc1_importance" type="number" min="1" max="10" style="width:44px;"></td>
+        <td><input id="jtbd_soc1_satisfaction" type="number" min="1" max="10" style="width:44px;"></td>
+        <td><textarea id="jtbd_soc1_source" style="width:97%;" placeholder="Source..."></textarea></td>
       </tr>
       <tr>
-        <td><textarea style="width:97%;" placeholder="Another social scenario..."></textarea></td>
-        <td><input type="number" min="1" max="10" style="width:45px;"></td>
-        <td><input type="number" min="1" max="10" style="width:45px;"></td>
-        <td><textarea style="width:97%;" placeholder="Source..."></textarea></td>
+        <td><textarea id="jtbd_soc2" style="width:97%;" placeholder="Another social scenario..."></textarea></td>
+        <td><input id="jtbd_soc2_importance" type="number" min="1" max="10" style="width:44px;"></td>
+        <td><input id="jtbd_soc2_satisfaction" type="number" min="1" max="10" style="width:44px;"></td>
+        <td><textarea id="jtbd_soc2_source" style="width:97%;" placeholder="Source..."></textarea></td>
       </tr>
       <tr>
-        <td><textarea style="width:97%;" placeholder="Third social scenario..."></textarea></td>
-        <td><input type="number" min="1" max="10" style="width:45px;"></td>
-        <td><input type="number" min="1" max="10" style="width:45px;"></td>
-        <td><textarea style="width:97%;" placeholder="Source..."></textarea></td>
+        <td><textarea id="jtbd_soc3" style="width:97%;" placeholder="Another social scenario..."></textarea></td>
+        <td><input id="jtbd_soc3_importance" type="number" min="1" max="10" style="width:44px;"></td>
+        <td><input id="jtbd_soc3_satisfaction" type="number" min="1" max="10" style="width:44px;"></td>
+        <td><textarea id="jtbd_soc3_source" style="width:97%;" placeholder="Source..."></textarea></td>
       </tr>
     </tbody>
   </table>
-  <div style="margin:12px 0 30px 0;">
+  <div style="margin:14px 0 28px 0;">
     <b>Justify your highest-priority job(s):</b><br>
-    <textarea style="width:100%; min-height:48px;" placeholder="Justify your highest-priority job(s). What makes this job most important to the target? How did you decide? (2-3 sentences minimum)"></textarea>
+    <textarea id="jtbd_justify" style="width:100%; min-height:48px;" placeholder="Justify your highest-priority job(s). What makes this job most important to the target? How did you decide? (2-3 sentences minimum)"></textarea>
   </div>
 
   <!-- PERSONA CARD -->
-  <h3 style="color:#1b4b7d; font-size: 18pt; margin-top:36px; margin-bottom:16px;">4. Persona Card</h3>
+  <h3 style="color:#1b4b7d; font-size: 18pt; margin-top:38px; margin-bottom:14px;">4. Persona Card</h3>
   <div style="display:flex; gap:32px; flex-wrap:wrap; margin-bottom:24px; align-items:flex-start;">
-    <!-- Image -->
     <div style="flex:0 0 175px; text-align:center;">
       <div style="width:160px; height:190px; background:#ecf0f1; border-radius:10px; margin-bottom:8px; display:flex; align-items:center; justify-content:center;">
         <input type="file" accept="image/*" style="margin:auto;" id="persona-image" onchange="showPreview(event)">
-        <img id="persona-preview" src="" alt="Persona Image" style="max-width:150px; max-height:180px; display:none; border-radius:6px; margin:auto;">
+        <img id="persona-preview" src="" alt="Persona Image" style="max-width:130px; max-height:180px; display:none; border-radius:6px; margin:auto;">
       </div>
-      <input type="text" style="width:98%; font-weight:bold; font-size:1.15em; margin-bottom:8px;" placeholder="Persona Name">
-      <textarea style="width:98%; min-height:32px;" placeholder="Short persona quote, e.g. 'If my laundry handled itself, I'd have more time for work and friends.'"></textarea>
+      <input id="persona_name" type="text" style="width:98%; font-weight:bold; font-size:1.15em; margin-bottom:8px;" placeholder="Persona Name">
+      <textarea id="persona_quote" style="width:98%; min-height:32px;" placeholder="Short persona quote, e.g. 'If my laundry handled itself, I'd have more time for work and friends.'"></textarea>
     </div>
-    <!-- Details -->
     <div style="flex:1; min-width:320px;">
       <div style="display:flex; gap:18px; margin-bottom:8px;">
         <div style="flex:1;">
           <div style="color:#1b4b7d; font-weight:bold; margin-bottom:2px;">Demographic profile</div>
-          <textarea style="width:100%; min-height:54px;" placeholder="Age, gender, location, family, education, occupation, income..."></textarea>
+          <textarea id="persona_demographics" style="width:100%; min-height:54px;" placeholder="Age, gender, location, family, education, occupation, income..."></textarea>
         </div>
         <div style="flex:1;">
           <div style="color:#1b4b7d; font-weight:bold; margin-bottom:2px;">Psychographic profile</div>
-          <textarea style="width:100%; min-height:54px;" placeholder="Lifestyle, values, interests, attitudes, social class..."></textarea>
+          <textarea id="persona_psychographics" style="width:100%; min-height:54px;" placeholder="Lifestyle, values, interests, attitudes, social class..."></textarea>
         </div>
       </div>
       <div style="display:flex; gap:18px; margin-bottom:8px;">
         <div style="flex:1;">
           <div style="color:#1b4b7d; font-weight:bold; margin-bottom:2px;">Goals & Motivations</div>
-          <textarea style="width:100%; min-height:36px;" placeholder="What does your persona hope to achieve?"></textarea>
+          <textarea id="persona_goals" style="width:100%; min-height:36px;" placeholder="What does your persona hope to achieve?"></textarea>
         </div>
         <div style="flex:1;">
           <div style="color:#1b4b7d; font-weight:bold; margin-bottom:2px;">Pain Points & Challenges</div>
-          <textarea style="width:100%; min-height:36px;" placeholder="What gets in the way of their goals?"></textarea>
+          <textarea id="persona_pains" style="width:100%; min-height:36px;" placeholder="What gets in the way of their goals?"></textarea>
         </div>
       </div>
       <div style="display:flex; gap:18px; margin-bottom:8px;">
         <div style="flex:1;">
           <div style="color:#1b4b7d; font-weight:bold; margin-bottom:2px;">Media/Info Habits</div>
-          <textarea style="width:100%; min-height:36px;" placeholder="How do they find information? Social media, blogs, reviews..."></textarea>
+          <textarea id="persona_media" style="width:100%; min-height:36px;" placeholder="How do they find information? Social media, blogs, reviews..."></textarea>
         </div>
         <div style="flex:1;">
           <div style="color:#1b4b7d; font-weight:bold; margin-bottom:2px;">Technology Usage</div>
-          <textarea style="width:100%; min-height:36px;" placeholder="Apps, devices, tech skills, online/offline..."></textarea>
+          <textarea id="persona_tech" style="width:100%; min-height:36px;" placeholder="Apps, devices, tech skills, online/offline..."></textarea>
         </div>
       </div>
       <div style="color:#1b4b7d; font-weight:bold; margin-bottom:2px;">Brand Relationships & Loyalty</div>
-      <textarea style="width:100%; min-height:32px;" placeholder="Brands they buy, how loyal, why..."></textarea>
+      <textarea id="persona_brands" style="width:100%; min-height:32px;" placeholder="Brands they buy, how loyal, why..."></textarea>
       <div style="display:flex; gap:18px; margin-top:8px;">
         <div style="flex:1;">
           <div style="color:#1b4b7d; font-weight:bold; margin-bottom:2px;">Success Metrics</div>
-          <textarea style="width:100%; min-height:32px;" placeholder="What does success look like for this persona?"></textarea>
+          <textarea id="persona_success" style="width:100%; min-height:32px;" placeholder="What does success look like for this persona?"></textarea>
         </div>
         <div style="flex:1;">
           <div style="color:#1b4b7d; font-weight:bold; margin-bottom:2px;">JTBD Link</div>
-          <textarea style="width:100%; min-height:32px;" placeholder="Paste your main JTBD here"></textarea>
+          <textarea id="persona_jtbd" style="width:100%; min-height:32px;" placeholder="Paste your main JTBD here"></textarea>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- EXPORT BUTTON (Place this at the very end of the worksheet form!) -->
+  <!-- EXPORT BUTTON -->
   <div style="margin-top:38px; text-align:center;">
     <button onclick="exportToWordPersona()" style="background:#ba372a; color:#fff; font-size:1.1em; padding:13px 34px; border:none; border-radius:5px; font-family:Arial,Helvetica,sans-serif; cursor:pointer;">
       Export to Word
@@ -304,7 +311,77 @@ function showPreview(event) {
   }
 }
 
-// This is a placeholder for your export-to-Word JS function.
-// A full function will collect all textarea/input values and persona image as base64, format them as a styled HTML string, and trigger download as .doc.
-// If you want the full working code for this form's IDs and layout, say so and I’ll provide the export script tailored for you.
+function getValue(id) {
+  var el = document.getElementById(id);
+  return el ? (el.value || '') : '';
+}
+
+function getImageBase64() {
+  var img = document.getElementById('persona-preview');
+  if(img && img.src && img.style.display !== 'none') return '<img src="'+img.src+'" style="max-width:130px;max-height:160px;border-radius:8px;">';
+  return '';
+}
+
+function exportToWordPersona() {
+  var content = '<html><head><meta charset="utf-8"><title>SWOT to Persona Worksheet</title></head><body style="font-family:Arial;">';
+  content += '<h2 style="color:#ba372a;">From SWOT to Persona-Ready Ideas</h2>';
+
+  // SWOT
+  content += '<h3 style="color:#1b4b7d;">1. SWOT Analysis</h3>';
+  ['strength','weakness','opportunity','threat'].forEach(function(swotType) {
+    var label = swotType.charAt(0).toUpperCase() + swotType.slice(1) + 's';
+    content += '<h4 style="color:#1b4b7d;">'+label+'</h4><table style="width:100%;border-collapse:collapse;">';
+    for(let i=1;i<=3;i++) {
+      content += '<tr><td style="width:66%;border:1px solid #eee;padding:6px;">'+getValue('swot_'+swotType+i)+'</td><td style="width:34%;border:1px solid #eee;padding:6px;">'+getValue('swot_'+swotType+i+'_source')+'</td></tr>';
+    }
+    content += '</table>';
+  });
+
+  // Segmentation
+  content += '<h3 style="color:#1b4b7d;">2. Segmentation – Four Lenses</h3>';
+  content += "<table style='width:100%;border-collapse:collapse;'><tr><th style='background:#f6f6f6;'>Lens</th><th style='background:#f6f6f6;'>Segment Detail</th><th style='background:#f6f6f6;'>Evidence / Source</th></tr>";
+  ['geographic','demographic','psychographic','behavioural'].forEach(function(seg){
+    content += '<tr><td style="padding:5px;">'+seg.charAt(0).toUpperCase()+seg.slice(1)+'</td><td style="padding:5px;">'+getValue('segment_'+seg)+'</td><td style="padding:5px;">'+getValue('segment_'+seg+'_source')+'</td></tr>';
+  });
+  content += '</table>';
+
+  // JTBD
+  content += '<h3 style="color:#1b4b7d;">3. Jobs to Be Done (JTBD)</h3>';
+  content += "<table style='width:100%;border-collapse:collapse;'><tr><th style='background:#f6f6f6;'>Type</th><th style='background:#f6f6f6;'>JTBD Statement</th><th style='background:#f6f6f6;'>Importance</th><th style='background:#f6f6f6;'>Satisfaction</th><th style='background:#f6f6f6;'>Source</th></tr>";
+  ['func','emo','soc'].forEach(function(type) {
+    for(let i=1;i<=3;i++) {
+      content += '<tr><td style="padding:5px;">'+(type==='func'?'Functional':type==='emo'?'Emotional':'Social')+'</td><td style="padding:5px;">'+getValue('jtbd_'+type+i)+'</td><td style="padding:5px;">'+getValue('jtbd_'+type+i+'_importance')+'</td><td style="padding:5px;">'+getValue('jtbd_'+type+i+'_satisfaction')+'</td><td style="padding:5px;">'+getValue('jtbd_'+type+i+'_source')+'</td></tr>';
+    }
+  });
+  content += '</table>';
+  content += '<b>JTBD justification:</b><br>' + getValue('jtbd_justify') + '<br>';
+
+  // Persona
+  content += '<h3 style="color:#1b4b7d;">4. Persona Card</h3>';
+  content += '<table style="width:100%;border-collapse:collapse;"><tr>';
+  content += '<td style="width:140px;vertical-align:top;">'+getImageBase64()+'</td>';
+  content += '<td style="vertical-align:top;">';
+  content += '<b style="font-size:1.3em;">'+getValue('persona_name')+'</b><br>';
+  content += '<i>'+getValue('persona_quote')+'</i><br>';
+  content += '<b>Demographics:</b> '+getValue('persona_demographics')+'<br>';
+  content += '<b>Psychographics:</b> '+getValue('persona_psychographics')+'<br>';
+  content += '<b>Goals & Motivations:</b> '+getValue('persona_goals')+'<br>';
+  content += '<b>Pain Points & Challenges:</b> '+getValue('persona_pains')+'<br>';
+  content += '<b>Media/Info Habits:</b> '+getValue('persona_media')+'<br>';
+  content += '<b>Technology Usage:</b> '+getValue('persona_tech')+'<br>';
+  content += '<b>Brand Relationships & Loyalty:</b> '+getValue('persona_brands')+'<br>';
+  content += '<b>Success Metrics:</b> '+getValue('persona_success')+'<br>';
+  content += '<b>JTBD Link:</b> '+getValue('persona_jtbd')+'<br>';
+  content += '</td></tr></table>';
+
+  content += '</body></html>';
+  var blob = new Blob(['\ufeff', content], { type: 'application/msword' });
+  var url = URL.createObjectURL(blob);
+  var link = document.createElement('a');
+  link.href = url;
+  link.download = "SWOT-to-Persona-Worksheet.doc";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
 </script>
