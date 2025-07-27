@@ -1,242 +1,70 @@
-<div style="font-family: Arial, Helvetica, sans-serif;">
+<!-- Place this at the bottom of your worksheet form section -->
+<button onclick="exportToWord()" style="margin-top:32px; background: #ba372a; color:#fff; border:none; border-radius:4px; padding:12px 30px; font-size:1.15em; font-family: Arial, Helvetica, sans-serif; cursor:pointer;">
+    Export to Word
+</button>
+<script>
+function exportToWord() {
+    // Gather all text/textarea/input fields in order
+    let content = '<h2 style="color:#ba372a;font-family:Arial;">From SWOT to Persona-Ready Ideas</h2>';
 
-<h2 style="color: #ba372a; font-size: 26pt; margin-top: 40px; margin-bottom: 28px;">From SWOT to Persona-Ready Ideas</h2>
-<div style="background: #fff3cd; padding: 14px; border-radius: 8px; margin-bottom: 28px;">
-    <strong>Assessment 1 Preparation Activity</strong><br />
-    <em>This worksheet helps you link your macro scan (PESTLE, SWOT) to segmentation, Jobs to Be Done, and a robust persona. Use evidence for every point—data and references are required for assessment.</em>
-</div>
+    // SWOT
+    content += '<h3 style="color:#1b4b7d;font-family:Arial;">1. SWOT Analysis</h3>';
+    ['Strengths','Weaknesses','Opportunities','Threats'].forEach(function(swotType) {
+        content += `<h4 style="color:#1b4b7d;font-family:Arial;margin-top:24px;">${swotType}</h4>`;
+        content += '<table style="width:100%;border-collapse:collapse;margin-bottom:8px;font-family:Arial;"><tr><th style=\'background:#f6f6f6;padding:6px;\'>'+swotType.slice(0,-1)+' Point</th><th style=\'background:#f6f6f6;padding:6px;\'>Source / Evidence</th></tr>';
+        for(let i=1;i<=3;i++) {
+            let v1 = document.getElementById(swotType+'_'+i+'_1')?.value||'';
+            let v2 = document.getElementById(swotType+'_'+i+'_2')?.value||'';
+            content += `<tr><td style='padding:5px;'>${v1}</td><td style='padding:5px;'>${v2}</td></tr>`;
+        }
+        content += '</table>';
+    });
 
-<h3 style="color: #1b4b7d; font-family: Arial, Helvetica, sans-serif;">Why we are doing this</h3>
-<div style="background: #f6f6f6; padding: 18px; border-radius: 8px; margin: 16px 0 36px 0;">
-    <p>
-        This activity prepares you for Assessment 1 Sections 3–4. Demonstrate your ability to build a logical chain from environmental scan through to persona, using <b>LaundryMax Co.</b> as the practice brand.
-    </p>
-</div>
+    // Segmentation
+    content += '<h3 style="color:#1b4b7d;font-family:Arial;">2. Segmentation – Four Lenses</h3>';
+    content += "<table style='width:100%;border-collapse:collapse;font-family:Arial;'><tr><th style='background:#f6f6f6;'>Lens</th><th style='background:#f6f6f6;'>Segment Detail</th><th style='background:#f6f6f6;'>Evidence / Source</th></tr>";
+    ['Geographic','Demographic','Psychographic','Behavioural'].forEach(function(seg,i) {
+        let d = document.getElementById('Seg_'+i+'_d')?.value||'';
+        let s = document.getElementById('Seg_'+i+'_s')?.value||'';
+        content += `<tr><td style='padding:5px;'>${seg}</td><td style='padding:5px;'>${d}</td><td style='padding:5px;'>${s}</td></tr>`;
+    });
+    content += '</table>';
 
-<div style="display: flex; flex-wrap: wrap; gap: 18px; margin-bottom: 32px;">
-    <div style="flex: 1; min-width: 250px; background: #fff; border: 1px solid #ecf0f1; padding: 18px; border-radius: 8px;">
-        <h4 style="color:#1b4b7d; font-family: Arial, Helvetica, sans-serif;">What you will demonstrate</h4>
-        <ul>
-            <li>Build a referenced SWOT (separate S/W/O/T, 3 points each, with sources)</li>
-            <li>Apply segmentation: four-lens model (with evidence)</li>
-            <li>Develop three-layer Jobs to Be Done (importance, satisfaction, evidence)</li>
-            <li>Construct a high-impact persona for innovation concept</li>
-        </ul>
-    </div>
-    <div style="flex: 1; min-width: 250px; background: #fff; border: 1px solid #ecf0f1; padding: 18px; border-radius: 8px;">
-        <h4 style="color:#1b4b7d; font-family: Arial, Helvetica, sans-serif;">Evidence at Every Step</h4>
-        <ul>
-            <li>Support each point and segment with a referenced source</li>
-            <li>Include at least one measurable outcome in persona</li>
-            <li>Export your completed worksheet to Word (see instructions at end)</li>
-        </ul>
-    </div>
-    <div style="flex: 1; min-width: 250px; background: #fff; border: 1px solid #ecf0f1; padding: 18px; border-radius: 8px;">
-        <h4 style="color:#1b4b7d; font-family: Arial, Helvetica, sans-serif;">How to Complete</h4>
-        <ol>
-            <li>Work through the sections below</li>
-            <li>Fill in each row—be specific, reference evidence</li>
-            <li>Export to Word and include your completed worksheet in your assessment</li>
-        </ol>
-    </div>
-</div>
+    // JTBD
+    content += '<h3 style="color:#1b4b7d;font-family:Arial;">3. Jobs to Be Done (JTBD)</h3>';
+    content += "<table style='width:100%;border-collapse:collapse;font-family:Arial;'><tr><th style='background:#f6f6f6;'>Type</th><th style='background:#f6f6f6;'>Statement</th><th style='background:#f6f6f6;'>Importance</th><th style='background:#f6f6f6;'>Satisfaction</th><th style='background:#f6f6f6;'>Evidence</th></tr>";
+    ['Functional','Emotional','Social'].forEach(function(j,i){
+        let stmt = document.getElementById('JTBD_'+i+'_stmt')?.value||'';
+        let imp = document.getElementById('JTBD_'+i+'_imp')?.value||'';
+        let sat = document.getElementById('JTBD_'+i+'_sat')?.value||'';
+        let ev = document.getElementById('JTBD_'+i+'_ev')?.value||'';
+        content += `<tr><td style='padding:5px;'>${j}</td><td style='padding:5px;'>${stmt}</td><td style='padding:5px;'>${imp}</td><td style='padding:5px;'>${sat}</td><td style='padding:5px;'>${ev}</td></tr>`;
+    });
+    content += '</table>';
+    let jtbdJust = document.getElementById('JTBD_just')?.value||'';
+    content += '<b>JTBD justification:</b> ' + jtbdJust + '<br>';
 
-<!-- SWOT sections -->
-<h3 style="color: #1b4b7d; font-family: Arial, Helvetica, sans-serif; margin-top:36px;">1. SWOT Analysis</h3>
-<p style="margin-bottom:16px;">Add three referenced points for each area. Use data or citations for every point.</p>
+    // Persona
+    content += '<h3 style="color:#1b4b7d;font-family:Arial;">4. Persona Card</h3>';
+    let personaLabels = [
+        'Name','Short Description','Goals / Desired Outcomes','Pain Points','JTBD Link','Quote','Success Metric','Media/Info Habits'
+    ];
+    content += "<table style='width:100%;border-collapse:collapse;font-family:Arial;'>";
+    personaLabels.forEach(function(l,i){
+        let v = document.getElementById('Persona_'+i)?.value||'';
+        content += `<tr><td style='background:#f6f6f6;padding:5px;width:25%;'><b>${l}</b></td><td style='padding:5px;'>${v}</td></tr>`;
+    });
+    content += '</table>';
 
-<!-- Strengths -->
-<h4 style="color: #1b4b7d; margin-bottom:8px; margin-top:28px; font-family: Arial, Helvetica, sans-serif;">Strengths</h4>
-<table style="width:100%; border-collapse: collapse; background: #fff;">
-    <thead>
-        <tr style="background: #f6f6f6;">
-            <th style="padding: 7px; width:50%;">Strength (brief point)</th>
-            <th style="padding: 7px; width:50%;">Source / Evidence</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr><td><input style="width:97%;" type="text"></td><td><input style="width:97%;" type="text"></td></tr>
-        <tr><td><input style="width:97%;" type="text"></td><td><input style="width:97%;" type="text"></td></tr>
-        <tr><td><input style="width:97%;" type="text"></td><td><input style="width:97%;" type="text"></td></tr>
-    </tbody>
-</table>
-
-<!-- Weaknesses -->
-<h4 style="color: #1b4b7d; margin-bottom:8px; margin-top:24px; font-family: Arial, Helvetica, sans-serif;">Weaknesses</h4>
-<table style="width:100%; border-collapse: collapse; background: #fff;">
-    <thead>
-        <tr style="background: #f6f6f6;">
-            <th style="padding: 7px; width:50%;">Weakness (brief point)</th>
-            <th style="padding: 7px; width:50%;">Source / Evidence</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr><td><input style="width:97%;" type="text"></td><td><input style="width:97%;" type="text"></td></tr>
-        <tr><td><input style="width:97%;" type="text"></td><td><input style="width:97%;" type="text"></td></tr>
-        <tr><td><input style="width:97%;" type="text"></td><td><input style="width:97%;" type="text"></td></tr>
-    </tbody>
-</table>
-
-<!-- Opportunities -->
-<h4 style="color: #1b4b7d; margin-bottom:8px; margin-top:24px; font-family: Arial, Helvetica, sans-serif;">Opportunities</h4>
-<table style="width:100%; border-collapse: collapse; background: #fff;">
-    <thead>
-        <tr style="background: #f6f6f6;">
-            <th style="padding: 7px; width:50%;">Opportunity (brief point)</th>
-            <th style="padding: 7px; width:50%;">Source / Evidence</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr><td><input style="width:97%;" type="text"></td><td><input style="width:97%;" type="text"></td></tr>
-        <tr><td><input style="width:97%;" type="text"></td><td><input style="width:97%;" type="text"></td></tr>
-        <tr><td><input style="width:97%;" type="text"></td><td><input style="width:97%;" type="text"></td></tr>
-    </tbody>
-</table>
-
-<!-- Threats -->
-<h4 style="color: #1b4b7d; margin-bottom:8px; margin-top:24px; font-family: Arial, Helvetica, sans-serif;">Threats</h4>
-<table style="width:100%; border-collapse: collapse; background: #fff;">
-    <thead>
-        <tr style="background: #f6f6f6;">
-            <th style="padding: 7px; width:50%;">Threat (brief point)</th>
-            <th style="padding: 7px; width:50%;">Source / Evidence</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr><td><input style="width:97%;" type="text"></td><td><input style="width:97%;" type="text"></td></tr>
-        <tr><td><input style="width:97%;" type="text"></td><td><input style="width:97%;" type="text"></td></tr>
-        <tr><td><input style="width:97%;" type="text"></td><td><input style="width:97%;" type="text"></td></tr>
-    </tbody>
-</table>
-
-<!-- Segmentation -->
-<h3 style="color: #1b4b7d; font-family: Arial, Helvetica, sans-serif; margin-top:40px;">2. Segmentation – Four Lenses</h3>
-<p style="margin-bottom:12px;">Complete all four lenses for your main segment, citing evidence for each.</p>
-<table style="width:100%; border-collapse: collapse; background: #fff;">
-    <thead>
-        <tr style="background: #f6f6f6;">
-            <th style="padding: 7px; width:26%;">Lens</th>
-            <th style="padding: 7px; width:44%;">Segment Detail</th>
-            <th style="padding: 7px; width:30%;">Evidence / Source</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><b>Geographic</b></td>
-            <td><input style="width:98%;" type="text"></td>
-            <td><input style="width:97%;" type="text"></td>
-        </tr>
-        <tr style="background: #f6f6f6;">
-            <td><b>Demographic</b></td>
-            <td><input style="width:98%;" type="text"></td>
-            <td><input style="width:97%;" type="text"></td>
-        </tr>
-        <tr>
-            <td><b>Psychographic</b></td>
-            <td><input style="width:98%;" type="text"></td>
-            <td><input style="width:97%;" type="text"></td>
-        </tr>
-        <tr style="background: #f6f6f6;">
-            <td><b>Behavioural</b></td>
-            <td><input style="width:98%;" type="text"></td>
-            <td><input style="width:97%;" type="text"></td>
-        </tr>
-    </tbody>
-</table>
-
-<!-- JTBD -->
-<h3 style="color: #1b4b7d; font-family: Arial, Helvetica, sans-serif; margin-top:40px;">3. Jobs to Be Done (JTBD)</h3>
-<p style="margin-bottom:10px;">Draft one for each type, rate importance/satisfaction, and cite evidence.</p>
-<table style="width:100%; border-collapse: collapse; background: #fff;">
-    <thead>
-        <tr style="background: #f6f6f6;">
-            <th style="padding:7px;">Job Type</th>
-            <th style="padding:7px;">Statement (When... I want... so I can...)</th>
-            <th style="padding:7px;">Importance<br>(1–10)</th>
-            <th style="padding:7px;">Satisfaction<br>(1–10)</th>
-            <th style="padding:7px;">Evidence / Source</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Functional</td>
-            <td><input style="width:96%;" type="text"></td>
-            <td><input style="width:48px;" type="number" min="1" max="10"></td>
-            <td><input style="width:48px;" type="number" min="1" max="10"></td>
-            <td><input style="width:95%;" type="text"></td>
-        </tr>
-        <tr style="background: #f6f6f6;">
-            <td>Emotional</td>
-            <td><input style="width:96%;" type="text"></td>
-            <td><input style="width:48px;" type="number" min="1" max="10"></td>
-            <td><input style="width:48px;" type="number" min="1" max="10"></td>
-            <td><input style="width:95%;" type="text"></td>
-        </tr>
-        <tr>
-            <td>Social</td>
-            <td><input style="width:96%;" type="text"></td>
-            <td><input style="width:48px;" type="number" min="1" max="10"></td>
-            <td><input style="width:48px;" type="number" min="1" max="10"></td>
-            <td><input style="width:95%;" type="text"></td>
-        </tr>
-    </tbody>
-</table>
-<p style="margin: 18px 0 0 0;">Which job is highest value for your persona? Justify in one sentence:</p>
-<input style="width:99%;" type="text" placeholder="e.g. 'Functional – because students care most about time-saving, which is under-served by current options.'">
-
-<!-- Persona Card -->
-<h3 style="color: #1b4b7d; font-family: Arial, Helvetica, sans-serif; margin-top:40px;">4. Persona Card</h3>
-<table style="width:100%; border-collapse: collapse; background: #fff;">
-    <tbody>
-        <tr>
-            <td style="background: #f6f6f6; width: 24%;"><b>Name</b></td>
-            <td><input style="width:99%;" type="text"></td>
-        </tr>
-        <tr>
-            <td style="background: #f6f6f6;"><b>Short Description</b></td>
-            <td><input style="width:99%;" type="text"></td>
-        </tr>
-        <tr>
-            <td style="background: #f6f6f6;"><b>Goals / Desired Outcomes</b></td>
-            <td><input style="width:99%;" type="text"></td>
-        </tr>
-        <tr>
-            <td style="background: #f6f6f6;"><b>Pain Points</b></td>
-            <td><input style="width:99%;" type="text"></td>
-        </tr>
-        <tr>
-            <td style="background: #f6f6f6;"><b>JTBD Link</b></td>
-            <td><input style="width:99%;" type="text"></td>
-        </tr>
-        <tr>
-            <td style="background: #f6f6f6;"><b>Quote (their voice)</b></td>
-            <td><input style="width:99%;" type="text"></td>
-        </tr>
-        <tr>
-            <td style="background: #f6f6f6;"><b>Success Metric</b></td>
-            <td><input style="width:99%;" type="text"></td>
-        </tr>
-        <tr>
-            <td style="background: #f6f6f6;"><b>Media/Info Habits</b></td>
-            <td><input style="width:99%;" type="text"></td>
-        </tr>
-    </tbody>
-</table>
-
-<h3 style="color: #1b4b7d; font-family: Arial, Helvetica, sans-serif; margin-top:40px;">Export to Word &ndash; Submission instructions</h3>
-<div style="background: #fff3cd; border-radius: 8px; padding: 15px 20px; margin-bottom: 24px;">
-    <ol>
-        <li>When finished, <strong>copy and paste your completed worksheet into a Word document</strong>. Use <span style="color: #ba372a;">RMIT table and header styles</span> for professional presentation.</li>
-        <li>Ensure every field includes referenced evidence.</li>
-        <li>Upload with your assessment submission.</li>
-    </ol>
-    <p><strong>Tip:</strong> In Word, use Table Design &gt; Shading to make headers red (<span style="color:#ba372a;">#ba372a</span>) or blue (<span style="color:#1b4b7d;">#1b4b7d</span>) for RMIT branding.</p>
-</div>
-
-<hr style="border: 0; border-top: 2px solid #1b4b7d; margin: 32px 0;" />
-<h3 style="color: #1b4b7d; font-family: Arial, Helvetica, sans-serif;">
-    <img style="vertical-align: bottom; margin-right: 10px;" src="https://rmit.instructure.com/courses/147991/files/46556729/preview" width="50" /> Optional extension
-</h3>
-<p style="font-family: Arial, Helvetica, sans-serif;">Want to stretch? Create a second persona for a different segment or peer-review another group’s worksheet for feedback.</p>
-<p style="font-size: 10pt; margin-top: 18px; font-family: Arial, Helvetica, sans-serif;"><em>Template for MKTG1092, Semester 2 2025.</em></p>
-</div>
+    // Export
+    var header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>SWOT to Persona Worksheet</title></head><body>"+content+"</body></html>";
+    var blob = new Blob(['\ufeff', header], { type: 'application/msword' });
+    var url = URL.createObjectURL(blob);
+    var link = document.createElement('a');
+    link.href = url;
+    link.download = "SWOT-to-Persona-Worksheet.doc";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+</script>
