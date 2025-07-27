@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>From SWOT to Persona-Ready Ideas — Worksheet</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 0 0 60px 0;
+        }
+        .container {
+            max-width: 760px;
+            margin: 40px auto 0 auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 16px #eee;
+            padding: 30px 20px 40px 20px;
+        }
+        h1, h2 {
+            color: #ba372a;
+        }
+        h2 {
+            margin-top: 40px;
+        }
+        label {
+            font-weight: bold;
+        }
+        textarea, input[type="text"] {
+            width: 100%;
+            min-height: 48px;
+            border-radius: 6px;
+            border: 1px solid #bbb;
+            padding: 8px;
+            margin-bottom: 16px;
+            font-size: 1em;
+            background: #f6f6f6;
+            resize: vertical;
+        }
+        .section {
+            background: #f6f6f6;
+            border-radius: 8px;
+            padding: 18px 14px 8px 14px;
+            margin-bottom: 36px;
+        }
+        button {
+            background: #ba372a;
+            color: #fff;
+            font-size: 1.15em;
+            padding: 10px 28px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #90271f;
+        }
+        .small {
+            font-size: 0.92em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>From SWOT to Persona-Ready Ideas</h1>
+        <p>This worksheet guides your group from analysis to insight using the LaundryMax Co. case. Complete each section and <b>export or copy-paste</b> your answers for submission.</p>
+
+        <form id="worksheet">
+            <!-- SWOT Analysis -->
+            <div class="section">
+                <h2>1. SWOT Analysis</h2>
+                <label for="strengths">Strengths (internal):</label>
+                <textarea id="strengths" name="strengths" placeholder="List 2–3, with evidence"></textarea>
+                <label for="weaknesses">Weaknesses (internal):</label>
+                <textarea id="weaknesses" name="weaknesses" placeholder="List 2–3, with evidence"></textarea>
+                <label for="opportunities">Opportunities (external):</label>
+                <textarea id="opportunities" name="opportunities" placeholder="List 2–3, citing PESTLE or market data"></textarea>
+                <label for="threats">Threats (external):</label>
+                <textarea id="threats" name="threats" placeholder="List 2–3, citing PESTLE or market data"></textarea>
+            </div>
+
+            <!-- Segmentation Table -->
+            <div class="section">
+                <h2>2. Segmentation Table</h2>
+                <label>Geographic:</label>
+                <input type="text" name="geo" placeholder="(e.g., inner-city, regional, campus...)">
+                <label>Demographic:</label>
+                <input type="text" name="demo" placeholder="(e.g., age, income, student, family...)">
+                <label>Psychographic:</label>
+                <input type="text" name="psycho" placeholder="(e.g., values, attitudes, motivations...)">
+                <label>Behavioural:</label>
+                <input type="text" name="behave" placeholder="(e.g., usage patterns, loyalty, brand attitudes...)">
+            </div>
+
+            <!-- JTBD -->
+            <div class="section">
+                <h2>3. Jobs to Be Done (JTBD)</h2>
+                <label>Functional Job:</label>
+                <textarea name="job_func" placeholder="When... I want... so I can..."></textarea>
+                <label>Emotional Job:</label>
+                <textarea name="job_emotional" placeholder="When... I want... so I can..."></textarea>
+                <label>Social Job:</label>
+                <textarea name="job_social" placeholder="When... I want... so I can..."></textarea>
+                <label>Which job is highest value and why?</label>
+                <textarea name="job_priority" placeholder="Explain which job matters most and how you know (importance/satisfaction scores)"></textarea>
+            </div>
+
+            <!-- Persona Card -->
+            <div class="section">
+                <h2>4. Persona Card</h2>
+                <label>Name:</label>
+                <input type="text" name="persona_name" placeholder="e.g., Jordan, busy postgrad student">
+                <label>Brief Description:</label>
+                <textarea name="persona_desc" placeholder="Summary/background in 1–2 lines"></textarea>
+                <label>Needs & Goals:</label>
+                <textarea name="persona_needs" placeholder="What does this person want to achieve?"></textarea>
+                <label>Pain Points:</label>
+                <textarea name="persona_pains" placeholder="What are their main frustrations?"></textarea>
+                <label>Media & Info Habits:</label>
+                <textarea name="persona_media" placeholder="(e.g., Instagram, TikTok, friends, campus ads...)"></textarea>
+                <label>Measurable Success Outcome:</label>
+                <textarea name="persona_success" placeholder="e.g., 'Laundry picked up and returned in 24h'"></textarea>
+            </div>
+
+            <button type="button" onclick="window.print()">Print or Save as PDF</button>
+            <p class="small" style="margin-top:16px;">Tip: Save/print this page as PDF for upload. Or, copy-paste your answers to a Word doc.<br>
+            Questions? Raise a GitHub issue or ask in class.</p>
+        </form>
+    </div>
+</body>
+</html>
